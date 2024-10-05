@@ -7,6 +7,7 @@ import Projeto3 from '../../assets/projeto3.png'
 import Projeto4 from '../../assets/projeto4.png'
 import Projeto5 from '../../assets/projeto5.png'
 import Projeto6 from '../../assets/projeto6.jpeg'
+import ProjectList from '../../Componentes/Projetos/ProjectList'; // Importar o novo componente ProjectList
 import { BsInstagram } from "react-icons/bs";
 import { BsEnvelope } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
@@ -39,6 +40,15 @@ function Home() {
             elements.forEach((element) => myObserver.unobserve(element));
         };
     }, []);
+
+    const projects = [
+        { title: "Projeto 1", image: Projeto1, link: "https://bickcraft-iota.vercel.app/" },
+        { title: "Projeto 2", image: Projeto2, link: "https://challenge-formula-e-phi.vercel.app/" },
+        { title: "Projeto 3", image: Projeto3, link: "https://global-solution-steel.vercel.app/" },
+        { title: "Projeto 4", image: Projeto4, link: "https://animais-fantasticos-eosin.vercel.app/" },
+        { title: "Projeto 5", image: Projeto5, link: "https://cp2-front-end.vercel.app/" },
+        { title: "Projeto 6", image: Projeto6, link: "https://workshop-de-html-e-css.vercel.app/" },
+    ];
 
     return (
         <main>
@@ -112,48 +122,10 @@ function Home() {
             {/* Seção Portfólio */}
             <section className="py-20 rolagem opacity-0 transition-opacity duration-700" id="projetos">
                 <div className="max-w-7xl mx-auto text-center">
-                    <h2 className="text-4xl text-white mb-10">MEU <span className="text-green-500">PORTFÓLIO.</span></h2>
-                    <div className="flex flex-wrap justify-around gap-8">
-                        <div className="w-80 h-96 bg-cover bg-center rounded-3xl shadow-lg relative" style={{ backgroundImage: `url(${Projeto1})` }}>
-                            <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-3xl">
-                                <p className="text-white font-bold text-xl">Projeto 1</p>
-                                <Link to="https://bickcraft-iota.vercel.app/" className="mt-4 px-4 py-2 bg-white text-black font-semibold rounded-lg">Ver Mais</Link>
-                            </div>
-                        </div>
-                        <div className="w-80 h-96 bg-cover bg-center rounded-3xl shadow-lg relative" style={{ backgroundImage: `url(${Projeto2})` }}>
-                            <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-3xl">
-                                <p className="text-white font-bold text-xl">Projeto 2</p>
-                                <Link to="https://challenge-formula-e-phi.vercel.app/" className="mt-4 px-4 py-2 bg-white text-black font-semibold rounded-lg">Ver Mais</Link>
-                            </div>
-                        </div>
-                        <div className="w-80 h-96 bg-cover bg-center rounded-3xl shadow-lg relative" style={{ backgroundImage: `url(${Projeto3})` }}>
-                            <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-3xl">
-                                <p className="text-white font-bold text-xl">Projeto 3</p>
-                                <Link to="https://global-solution-steel.vercel.app/" className="mt-4 px-4 py-2 bg-white text-black font-semibold rounded-lg">Ver Mais</Link>
-                            </div>
-                        </div>
-                        <div className="w-80 h-96 bg-cover bg-center rounded-3xl shadow-lg relative" style={{ backgroundImage: `url(${Projeto4})` }}>
-                            <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-3xl">
-                                <p className="text-white font-bold text-xl">Projeto 4</p>
-                                <Link to="https://animais-fantasticos-eosin.vercel.app/" className="mt-4 px-4 py-2 bg-white text-black font-semibold rounded-lg">Ver Mais</Link>
-                            </div>
-                        </div>
-                        <div className="w-80 h-96 bg-cover bg-center rounded-3xl shadow-lg relative" style={{ backgroundImage: `url(${Projeto5})` }}>
-                            <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-3xl">
-                                <p className="text-white font-bold text-xl">Projeto 5</p>
-                                <Link to="https://cp2-front-end.vercel.app/" className="mt-4 px-4 py-2 bg-white text-black font-semibold rounded-lg">Ver Mais</Link>
-                            </div>
-                        </div>
-                        <div className="w-80 h-96 bg-cover bg-center rounded-3xl shadow-lg relative" style={{ backgroundImage: `url(${Projeto6})` }}>
-                            <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-3xl">
-                                <p className="text-white font-bold text-xl">Projeto 6</p>
-                                <Link to="https://workshop-de-html-e-css.vercel.app/" className="mt-4 px-4 py-2 bg-white text-black font-semibold rounded-lg">Ver Mais</Link>
-                            </div>
-                        </div>
-                    </div>
+                    <h2 className="text-4xl text-white mb-10">MEUS <span className="text-green-500">PROJETOS.</span></h2>
+                    <ProjectList projects={projects} />
                 </div>
             </section>
-
             {/* Seção Contato */}
             <section className="py-20 rolagem opacity-0 transition-opacity duration-700" id="contato">
                 <div className="max-w-7xl mx-auto text-center">
