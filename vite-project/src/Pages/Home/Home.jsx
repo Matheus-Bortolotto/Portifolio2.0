@@ -7,6 +7,7 @@ import Projeto3 from '../../assets/projeto3.png'
 import Projeto4 from '../../assets/projeto4.png'
 import Projeto5 from '../../assets/projeto5.png'
 import Projeto6 from '../../assets/projeto6.jpeg'
+import Projeto7 from '../../assets/projeto7.png'
 import ProjectList from '../../Componentes/Projetos/ProjectList'; // Importar o novo componente ProjectList
 import { BsInstagram } from "react-icons/bs";
 import { BsEnvelope } from "react-icons/bs";
@@ -48,6 +49,7 @@ function Home() {
         { title: "Projeto 4", image: Projeto4, link: "https://animais-fantasticos-eosin.vercel.app/" },
         { title: "Projeto 5", image: Projeto5, link: "https://cp2-front-end.vercel.app/" },
         { title: "Projeto 6", image: Projeto6, link: "https://workshop-de-html-e-css.vercel.app/" },
+        { title: "Projeto 7", image: Projeto7, link: "https://portal-filmes-beta.vercel.app/" },
     ];
 
     return (
