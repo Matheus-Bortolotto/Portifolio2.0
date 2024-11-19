@@ -21,6 +21,7 @@ import { BsFiletypeSass } from "react-icons/bs";
 import { BsGit } from "react-icons/bs";
 import { BsGithub } from "react-icons/bs";
 import { BsWhatsapp } from "react-icons/bs";
+import { BsFiletypeSql } from "react-icons/bs";
 
 function Home() {
     useEffect(() => {
@@ -116,6 +117,9 @@ function Home() {
                         </div>
                         <div className="p-10 bg-gray-800 rounded-lg text-white shadow-lg hover:scale-105 transition-transform">
                             <BsGit className="text-6xl text-green-500" />
+                        </div>
+                        <div className="p-10 bg-gray-800 rounded-lg text-white shadow-lg hover:scale-105 transition-transform">
+                            <BsFiletypeSql className="text-6xl text-green-500" />
                         </div>
                     </div>
                 </div>
